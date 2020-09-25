@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css"> 
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+	<title>Document</title>
+
+</head>
+<body>
+
+	<div class="form1" >
+		<div class="box_form4 flex flex-wrap">
+			<p class="w-1/2">
+				<input type="radio" id="1chieu" name="option">
+				<label for="1chieu"> 1 chiều </label>
+			</p>
+			<p class="w-1/2">
+				<input type="radio" id="khuhoi" name="option">
+				<label for="khuhoi"> khứ hồi </label>
+			</p>	
+		<hr>
+		</div>
+		<div class="flex flex-wrap">
+			<div class="inputwithicon sm:w-1 md:w-1/2 lg:w-1/3">
+				<input class="box_form2" type="text" name="" >
+				<i class="fas fa-plane-departure" ></i>
+			</div>
+			<div class="inputwithicon sm:w-1 md:w-1/2 lg:w-1/3">
+				<input class="box_form2" type="text" name="" >
+				<i class="fas fa-plane-arrival" ></i>
+			</div>
+			<!-- drop down menu -->
+			<div class="dropdown sm:w-1 md:w-1/2 lg:w-1/3" >
+
+	        <button class="box_form " id="btn-select-num-people" onclick="showOption()" >
+	        	<table width="100%">
+	        		<tr>
+	        			<td width="20%">
+	        				<i class="far fa-user i" ></i>
+	        			</td>
+	        			<td width="80%">
+	        				 <b class="num-people-total">
+				                <b class="total-people ">1</b>
+				                <b>khách</b>
+				            </b>
+				            <div class="row">
+				                <i class="num-aldult">1</i>
+				                <i> người lớn,</i>
+				                <i class="num-kids">0</i>
+				                <i> trẻ em,</i>
+				                <i class="num-baby">0</i>
+				                <i> em bé</i>
+				            </div>
+	        			</td>
+	        		</tr>
+	        	</table>
+				           
+
+	        </button>
+
+	        <div id="dropdown-id" class="dropdown-content">
+	        	<hr>
+	            <table width="100%" id="num_people_regis">
+	            	
+	            		<tr>
+		                    <td >
+		                        <p class="num-aldult">1</p>
+		                    </td>
+		                    <td width="60%">
+		                        <div>Người lớn <i class="text-detail-people">(Từ 12 tuổi)</i></div>
+		                    </td>
+		                    <td width="10%" colspan="4">
+		                        <button class="button" onclick="decreaseCount('num-aldult')">-</button>
+		                    </td>
+		                    <td width="10%">
+		                        <button class="button" onclick="increaseCount('num-aldult')">+</button>
+		                    </td>
+		                </tr>
+		        </table>
+		                <hr>
+		        <table width="100%" id="num_people_regis">
+		                <tr>
+		                    <td>
+		                        <p class="num-kids">0</p>
+		                    </td>
+		                    <td width="60%">
+		                        <div>Trẻ em  <i class="text-detail-people">(Từ 2-12 tuổi)</i></div>
+		                    </td>
+		                    <td width="10%" colspan="4">
+		                        <button class="button" onclick="decreaseCount('num-kids')">-</button>
+		                    </td>
+		                    <td width="10%">
+		                        <button class="button" onclick="increaseCount('num-kids')">+</button>
+		                    </td>
+		                </tr>
+		        </table>
+		                <hr>
+		        <table width="100%" id="num_people_regis">
+		                <tr>
+		                    <td>
+		                        <p class="num-baby">0</p>
+		                    </td>
+		                    <td width="60%">
+		                        <div>Em bé <i class="text-detail-people">(<2 tuổi)</i></div>
+		                    </td>
+		                    <td width="10%" colspan="4">
+		                        <button class="button" onclick="decreaseCount('num-baby')">-</button>
+		                    </td>
+		                    <td width="10%">
+		                        <button class="button" onclick="increaseCount('num-baby')">+</button>
+		                    </td>
+		                </tr>
+	            	
+		                
+	            </table>
+	        </div>
+    	</div>
+			<!-- end -->
+			
+			<input class="box_form2 sm:w-1 md:w-1/2 lg:w-1/3" type="date" name="go">
+			<input class="box_form2 sm:w-1 md:w-1/2 lg:w-1/3" type="date" name="back">
+			<button type="submit" class="sm:w-1 md:w-1/2 lg:w-1/3"><i class="fas fa-search" style="font-size:18px;"></i>Tìm kiếm </button>
+		</div>
+	</div>
+	
+	<script>
+
+	    function showOption() {
+	    	document.getElementById('dropdown-id').classList.toggle('is-dropdown');
+	    }
+
+	    function increaseCount(classname) {
+	        var currentNumOfPeople = document.getElementsByClassName(classname);
+	        for (var i = 0; i < currentNumOfPeople.length; i++) {
+	            currentNumOfPeople[i].innerText++;
+	        }
+	        computeTotalPeople('total-people', 'in');
+
+	        //document.getElementsByClassName(classname).innerHTML = currentNumOfPeople;
+	    }
+
+	    function decreaseCount(classname) {
+	        var currentNumOfPeople = document.getElementsByClassName(classname);
+	        var isDecrease = false;
+	        for (var i = 0; i < currentNumOfPeople.length; i++) {
+	            if (classname === 'num-aldult' && currentNumOfPeople[i].innerText <= 1) break;
+	            if (currentNumOfPeople[i].innerText > 0) {
+	                currentNumOfPeople[i].innerText--;
+	                isDecrease = true;
+	            }
+	        }
+	        if (isDecrease) computeTotalPeople('total-people', 'de');
+	    }
+
+	    function computeTotalPeople(classname, operator) {
+	        var total = document.getElementsByClassName(classname);
+	        if (operator === 'in') total[0].innerText++;
+	        else if (operator === 'de') total[0].innerText--;
+	    }
+	</script>
+</body>
+</html>
