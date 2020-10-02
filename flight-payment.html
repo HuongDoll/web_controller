@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css"> 
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+	<title>Document</title>
+
+</head>
+<body style="background-color: black ">
+	<div class="form_select">
+		<div class="flex flex-wrap">
+			<div class="w-full md:w-2/3 px-4">
+				<div class="border border-gray-400 w-full rounded-md divide-y divide-gray-400 px-4 py-3 my-4">
+					<div class="font-semibold py-3">
+						Phương thức thanh toán
+					</div>
+					<div class="flex flex-wrap py-3">
+						<div class="w-full py-3">
+							<input type="radio" id="choose1" name="choose" checked onclick="choose(1)">
+							<label for="choose1">Chuyển khoản ngân hàng </label>
+						</div>
+						<div class="w-full py-3">
+							<input type="radio" id="choose2" name="choose" onclick="choose(2)">
+							<label for="choose2">Thanh toán ATM nội địa</label>
+						</div>
+						<div class="w-full py-3">
+							<input type="radio" id="choose3" name="choose" onclick="choose(3)">
+							<label for="choose3">Thanh toán thẻ tín dụng Visa/MasterCard</label>
+						</div>
+						<div class="w-full py-3">
+							<input type="radio" id="choose4" name="choose" onclick="choose(4)">
+							<label for="choose4">Thanh toán thẻ qua ví điện tử </label>
+						</div>
+						<div class="w-full py-3">
+							<input type="radio" id="choose5" name="choose" onclick="choose(5)">
+							<label for="choose5">Quét QRCode </label>
+						</div>
+							
+					</div>
+				</div>
+
+				<div class="border border-gray-400 w-full rounded-md divide-y divide-gray-400 px-4 py-3" style="display: block;" id="inf1">
+					<div class="font-semibold py-3">
+						Thông tin ngân hàng
+					</div>
+					<div class="flex flex-wrap py-3 divide-y divide-gray-400 px-4 py-3">
+						<div class="w-full font-semibold py-2 text-gray-800">Ngân hàng TMCP Kỹ thương Việt Nam -Techcombank (VNĐ)
+						</div>
+						<div class="flex flex-wrap w-full py-2">
+							<div class="w-1/4 px-2">
+								Tên tài khoản
+							</div>
+							<div class="w-3/4">
+								CONG TY CP KHOA HOC-CONG NGHE DTG
+							</div>
+						</div>
+						<div class="flex flex-wrap w-full py-2">
+							<div class="w-1/4 px-2">
+								Số tài khoản
+							</div>
+							<div class="w-3/4">
+								19036257586011 
+							</div>
+						</div>
+						<div class="flex flex-wrap w-full py-2">
+							<div class="w-1/4 px-2">
+								Chi Nhánh
+							</div>
+							<div class="w-3/4">
+								Sở Giao Dịch Hà Nội
+							</div>
+						</div>
+						<div class="flex flex-wrap w-full py-2">
+							<div class="w-1/4 px-2">
+								Số tiền
+							</div>
+							<div class="w-3/4">
+								1,796,000 VND
+							</div>
+						</div>
+						<div class="flex flex-wrap w-full py-2">
+							<div class="w-1/4 px-2">
+								Nội dung
+							</div>
+							<div class="w-3/4">
+								Thanh toan cho dh: LQ829Q
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="border border-gray-400 w-full rounded-md divide-y divide-gray-400 px-4 py-3" style="display: none;" id="inf2">
+					<div class="font-semibold py-3">
+						Chọn ngân hàng
+					</div>
+					<div class="flex flex-wrap py-3  px-4 py-3">
+						
+
+					</div>
+				</div>
+
+				<div class="border border-gray-400 w-full rounded-md divide-y divide-gray-400 px-4 py-3" style="display: none;" id="inf3">
+					<div class="font-semibold py-3">
+						Chọn thẻ tín dụng
+					</div>
+					<div class="flex flex-wrap py-3  px-4 py-3">
+						
+
+					</div>
+				</div>
+
+				<div class="border border-gray-400 w-full rounded-md divide-y divide-gray-400 px-4 py-3" style="display: none;" id="inf4">
+					<div class="font-semibold py-3">
+						Chọn ví điện tử
+					</div>
+					<div class="flex flex-wrap py-3  px-4 py-3">
+						
+
+					</div>
+				</div>
+
+				<div class="border border-gray-400 w-full rounded-md divide-y divide-gray-400 px-4 py-3" style="display: none;" id="inf5">
+					<div class="font-semibold py-3">
+						Chọn quét QR Code
+					</div>
+					<div class="flex flex-wrap py-3  px-4 py-3">
+						
+
+					</div>
+				</div>
+
+			</div>
+			<div class="w-full md:w-1/3 flex flex-wrap bg-gray-100 rounded px-6 py-3">
+				<div class=" text-xl font-semibold py-3 w-full">TỔNG TIỀN</div>
+				<hr class="w-full ">
+				<div class="py-2 w-full font-semibold"><i class="fas fa-plane-departure"></i> Hà Nội (HAN) <i class="fas fa-arrow-right"></i> Đà Lạt (DLI)</div>
+				<div class="w-full flex flex-wrap">
+					<div class="w-1/2">
+						Vietnam Airlines
+					</div>
+					<div class="w-1/2 text-right ">
+						BL6311
+					</div>
+				</div>
+				<div class="w-full flex flex-wrap">
+					<div class="w-1/2">
+						<i class="far fa-clock"></i> 12:40 - 14:25
+					</div>
+					<div class="w-1/2 text-right ">
+						<i class="far fa-calendar-alt"></i> 09/10/2020
+					</div>
+				</div>
+				<div class="py-2 w-full font-semibold">Người lớn</div>
+				<div class="flex flex-wrap w-full">
+					<div class="w-1/2">
+						2 x 1,060,000 =
+					</div>
+					<div class="w-1/2 text-right font-semibold">
+						2,120,000 đ
+					</div>
+				</div> 
+				<div class="py-2 w-full font-semibold">Trẻ em</div>
+				<div class="flex flex-wrap w-full">
+					<div class="w-1/2">
+						1 x 945,000 =
+					</div>
+					<div class="w-1/2 text-right font-semibold">
+						945,000 đ
+					</div>
+				</div>
+				<div class="py-2 w-full font-semibold">Em bé</div>
+				<div class="flex flex-wrap w-full">
+					<div class="w-1/2">
+						1 x 157,000 =
+					</div>
+					<div class="w-1/2 text-right font-semibold">
+						157,000 đ
+					</div>
+				</div>
+
+				<hr class="my-4 w-full">
+
+				<div class="w-full font-semibold"><i class="fas fa-plane-arrival"></i> Đà Lạt (DLI)  <i class="fas fa-arrow-right"></i> Hà Nội (HAN)</div>
+				<div class="w-full flex flex-wrap">
+					<div class="w-1/2">
+						Bammboo Airways
+					</div>
+					<div class="w-1/2 text-right ">
+						QH1422
+					</div>
+				</div>
+				<div class="w-full flex flex-wrap">
+					<div class="w-1/2">
+						<i class="far fa-clock"></i> 09:35 - 11:25
+					</div>
+					<div class="w-1/2 text-right ">
+						<i class="far fa-calendar-alt"></i> 09/10/2020
+					</div>
+				</div>
+				
+				<div class="py-2 w-full font-semibold">Người lớn</div>
+				<div class="flex flex-wrap w-full">
+					<div class="w-1/2">
+						2 x 1,060,000 =
+					</div>
+					<div class="w-1/2 text-right font-semibold">
+						2,120,000 đ
+					</div>
+				</div>
+				<div class="py-2 w-full font-semibold">Trẻ em</div>
+				<div class="flex flex-wrap w-full">
+					<div class="w-1/2">
+						1 x 945,000 =
+					</div>
+					<div class="w-1/2 text-right font-semibold">
+						945,000 đ
+					</div>
+				</div>
+				<div class="py-2 w-full font-semibold">Em bé</div>
+				<div class="flex flex-wrap w-full">
+					<div class="w-1/2">
+						1 x 157,000 =
+					</div>
+					<div class="w-1/2 text-right font-semibold" >
+						157,000 đ
+					</div>
+				</div>
+
+				<hr class="my-4 w-full">
+
+				<div class="w-full text-right font-semibold text-red-600 text-xl">5,540,000 đ</div>
+				<div class="w-full text-right italic text-sm">giá trên đã bao gồm thuế phí</div>
+
+				<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded w-full focus:outline-none"  >Tiếp tục</button>
+
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+		function choose(num){
+			for(var i=1; i<6; i++){
+				document.getElementById("inf"+i).style.display="none";
+			}
+			document.getElementById("inf"+num).style.display="block";
+		}
+</script>
+</html>

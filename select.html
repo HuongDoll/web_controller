@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css"> 
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+	<title>Document</title>
+
+</head>
+<body style="background-color: black ">
+	<div class="form_select">
+		<div class="text-3xl ">Chuyến bay từ Hà Nội đến thành phố Hồ Chí Minh </div>
+		<br>
+		<div class="flex flex-wrap">
+			<div class="md:w-3/4 sm:w-full px-2">
+				
+				<div class="flex flex-wrap">
+					<i class="xl:w-3/4 md:w-full text-gray-600 text-sm">
+						Tổng giá bao gồm các loại thuế và phí cho tất cả hành khách
+					</i>
+					<i class="xl:w-1/4 md:w-full text-right">
+						<select class="bg-cl py-2 px-2 text-gray-600 text-sm">
+							<option selected>Sắp xếp theo giá </option>
+							<option>Sắp xếp theo giờ bay </option>
+						</select>
+					</i>
+				</div>
+				<div class="text-xl ">Chuyến bay tốt nhất </div>
+				<hr>
+				<table class="py-2"  style="width: 100%">
+					<tr>
+						<td class="align-top" style="width: 20%;">
+							<img class="inline" src="vietjet.png">
+						</td>
+						<td class="align-top" style="width: 20%;">
+							<div>06:40 - 08:50</div>
+							<div class="text-gray-600 text-sm">HAN - SGN</div>
+						</td>
+						<td class="align-top" style="width: 20%;">
+							<div>2 Giờ 10 Phút</div>
+							<div class="text-gray-600 text-sm">Bay thẳng</div>
+							<div class="text-red-600">VJ125</div>
+						</td>
+						<td class="align-top" style="width: 20%;">
+							<div>779,900 VNĐ</div>
+							<div class="text-blue-600">ECO</div>
+						</td>
+						<td class="align-top" style="width: 15%;">
+							<button class="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded focus:outline-none">Chọn </button>
+						</td>
+						<td class="align-top" style="width: 5%;">
+							<button class="bg-cl hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border-gray-400 rounded focus:outline-none "><i class="fas fa-chevron-down" style="font-size:18px;" id="btn-select-num-people" onclick="showif('1')" ></i></button>
+
+						</td>
+					</tr>
+				</table>
+				<hr>
+				<div id="if1" style="display: none;" class="px-12">
+					<button class="bg-cl hover:bg-gray-100 text-black py-2 px-4 border-gray-400 focus:outline-none border-b-2" onclick="ifm('1','1')" id="title_ifm11">THÔNG TIN</button>
+					<button class="bg-cl hover:bg-gray-100 text-black py-2 px-4 border-gray-400 focus:outline-none" onclick="ifm('1','2')" id="title_ifm12">CHI TIẾT GIÁ VÉ </button>
+					<button class="bg-cl hover:bg-gray-100 text-black py-2 px-4 border-gray-400 focus:outline-none" onclick="ifm('1','3')" id="title_ifm13">ĐIỀU KIỆN VÉ </button>
+					<hr>
+					<div id="ifm11" style="display: block;" >
+						<div class="flex flex-wrap">
+							<div class="w-1/2 px-12">
+								<div>
+									<span class="py-2">HAN</span> <span>-</span> <span>08:50</span> <span class="text-gray-600 text-sm">Nội Bài</span>
+									<br>
+									<span class="py-2 text-gray-600 text-sm">chuyến bay</span> <span class="text-red-600">VJ153</span> <span class="text-blue-600 text-sm">(321)</span>
+									<br>
+									<span class="py-2">SGN</span> <span>-</span> <span>11:00</span> <span class="text-gray-600 text-sm">Tân Sơn Nhất</span>
+								</div>
+							</div>
+							<div class=" w-1/2 px-12">
+								<div class="py-2 text-gray-600 text-sm">Xách tay 7Kg</div>
+								<div class="py-2 text-gray-600 text-sm">Ký gửi mua thêm</div>
+							</div>
+						</div>
+							
+					</div>
+					<div class="px-12 " id="ifm12" style="display: none;" >
+						<table width="100%" >
+							<thead class="border py-2 font-semibold">
+								<td class="p-2">Hành khách</td>
+								<td>Số lượng</td>
+								<td>Giá vé</td>
+								<td>Thuế phí </td>
+								<td>Tổng</td>
+							</thead>
+							<tbody>
+								<tr class="border py-2">
+									<td class="p-2">Người lớn </td>
+									<td>1</td>
+									<td>199,000</td>
+									<td>580,900</td>
+									<td>779,900 đ </td>
+								</tr>
+								<tr class="border py-2">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="py-2">TỔNG TIỀN </td>
+									<td class="font-semibold">779,900 đ </td>
+								</tr>
+							</tbody>
+						</table>
+							
+					</div>
+					<div class="px-12 " id="ifm13" style="display: none;" >
+						<table width="100%" >
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Hoàn vé: </td>
+									<td>Không được phép </td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Đổi Tên Hành Khách:</td>
+									<td>Được phép - Thu phí: 500.000 VND .</td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Thay đổi chuyến bay:</td>
+									<td>Được phép - Thu phí: 500.000 VND .</td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Đổi Ngày Giờ Chuyến Bay:</td>
+									<td>Được phép - Thu phí: 380.000 VND + Giá vé chênh lệch (nếu có).</td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Thời hạn thay đổi (bao gồm thay đổi tên, ngày/chuyến bay, hành trình):</td>
+									<td>Trước giờ khởi hành 6 tiếng.</td>
+								</tr>
+						</table>
+							
+					</div>
+				</div>
+					
+				<hr>
+				<div class="text-xl ">Chuyến bay khác </div>
+				<hr>
+				<table class="py-2" style="width: 100%">
+					<tr class="py-2">
+						<td class="align-top" style="width: 20%;">
+							<img class="inline" src="vietjet.png">
+						</td>
+						<td class="align-top" style="width: 20%;">
+							<div>06:40 - 08:50</div>
+							<div class="text-gray-600 text-sm">HAN - SGN</div>
+						</td>
+						<td class="align-top" style="width: 20%;">
+							<div>2 Giờ 10 Phút</div>
+							<div class="text-gray-600 text-sm">Bay thẳng</div>
+							<div class="text-red-600">VJ125</div>
+						</td>
+						<td class="align-top" style="width: 20%;">
+							<div>779,900 VNĐ</div>
+							<div class="text-blue-600">ECO</div>
+						</td>
+						<td class="align-top" style="width: 15%;">
+							<button class="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent roundedfocus:outline-none">Chọn </button>
+						</td>
+						<td class="align-top" style="width: 5%;">
+							<button class="bg-cl hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border-gray-400 rounded focus:outline-none"><i class="fas fa-chevron-down" style="font-size:18px;" id="btn-select-num-people" onclick="showif('2')" ></i></button>
+
+						</td>
+					</tr>
+				</table>
+				<hr>
+				<div id="if2" style="display: none;" class="px-12">
+					<button class="bg-cl hover:bg-gray-100 text-black py-2 px-4 border-gray-400 focus:outline-none border-b-2" onclick="ifm('2','1')" id="title_ifm21">THÔNG TIN</button>
+					<button class="bg-cl hover:bg-gray-100 text-black py-2 px-4 border-gray-400 focus:outline-none" onclick="ifm('2','2')" id="title_ifm22">CHI TIẾT GIÁ VÉ </button>
+					<button class="bg-cl hover:bg-gray-100 text-black py-2 px-4 border-gray-400 focus:outline-none" onclick="ifm('2','3')" id="title_ifm23">ĐIỀU KIỆN VÉ </button>
+					<hr>
+					<div id="ifm21" style="display: block;" >
+						<div class="flex flex-wrap">
+							<div class="w-1/2 px-12">
+								<div>
+									<span class="py-2">HAN</span> <span>-</span> <span>08:50</span> <span class="text-gray-600 text-sm">Nội Bài</span>
+									<br>
+									<span class="py-2 text-gray-600 text-sm">chuyến bay</span> <span class="text-red-600">VJ153</span> <span class="text-blue-600">(321)</span>
+									<br>
+									<span class="py-2">SGN</span> <span>-</span> <span>11:00</span> <span class="text-gray-600 text-sm">Tân Sơn Nhất</span>
+								</div>
+							</div>
+							<div class="w-1/2 px-12">
+								<div class="py-2 text-gray-600 text-sm">Xách tay 7Kg</div>
+								<div class="py-2 text-gray-600 text-sm">Ký gửi mua thêm</div>
+							</div>
+						</div>
+							
+					</div>
+					<div class="px-12 " id="ifm22" style="display: none;" >
+						<table width="100%" >
+							<thead class="border py-2 font-semibold">
+								<td class="p-2">Hành khách</td>
+								<td>Số lượng</td>
+								<td>Giá vé</td>
+								<td>Thuế phí </td>
+								<td>Tổng</td>
+							</thead>
+							<tbody>
+								<tr class="border py-2">
+									<td class="p-2">Người lớn </td>
+									<td>1</td>
+									<td>199,000</td>
+									<td>580,900</td>
+									<td>779,900 đ </td>
+								</tr>
+								<tr class="border py-2">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="py-2">TỔNG TIỀN </td>
+									<td class="font-semibold">779,900 đ </td>
+								</tr>
+							</tbody>
+						</table>
+							
+					</div>
+					<div class="px-12 " id="ifm23" style="display: none;" >
+						<table width="100%" >
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Hoàn vé: </td>
+									<td>Không được phép </td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Đổi Tên Hành Khách:</td>
+									<td>Được phép - Thu phí: 500.000 VND .</td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Thay đổi chuyến bay:</td>
+									<td>Được phép - Thu phí: 500.000 VND .</td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Đổi Ngày Giờ Chuyến Bay:</td>
+									<td>Được phép - Thu phí: 380.000 VND + Giá vé chênh lệch (nếu có).</td>
+								</tr>
+								<tr class="border py-2">
+									<td class="font-semibold p-2">Thời hạn thay đổi (bao gồm thay đổi tên, ngày/chuyến bay, hành trình):</td>
+									<td>Trước giờ khởi hành 6 tiếng.</td>
+								</tr>
+						</table>
+							
+					</div>
+				</div>
+				<hr>
+				<button class="bg-cl hover:bg-gray-100 text-gray-800 py-2 px-4 border-gray-400 rounded focus:outline-none" style="width: 100%">THÊM CHUYẾN ĐI </button>
+
+			</div>
+			<div class="md:w-1/4 sm:w-full px-2 py-2">
+				<div class="text-xl ">BỘ LỌC CHIỀU ĐI</div>
+				<div class="flex flex-wrap">
+					<div class=" w-1/2 md:w-full py-2">
+						<hr>
+						<div class="py-2">HIỂN THỊ GIÁ</div>
+						<div>
+							<div class="py-2">
+								<input type="radio" id="cost1" name="cost">
+								<label for="cost1"   > Giá chưa thuế phí </label>
+							</div>
+							<div class="py-2">
+								<input type="radio" id="cost2" name="cost">
+								<label for="cost2" > Giá đã thuế phí  </label>
+							</div>	
+							<div class="py-2">
+								<input type="radio" id="costsum" name="cost" checked>
+								<label for="costsum" > Tổng giá  </label>
+							</div>	
+						</div>
+					</div>
+					<div class=" w-1/2 md:w-full">
+						<hr>
+						<div class="py-2">HÃNG HÀNG KHÔNG </div>
+						<div>
+							<div class="py-2">
+								<input type="checkbox" id="PA" name="PA">
+								<label for="PA"   >Pacific Airlines </label>
+							</div>
+							<div class="py-2">
+								<input type="checkbox" id="VJ" name="VJ">
+								<label for="VJ" > VietjetAir</label>
+							</div>	
+							<div class="py-2">
+								<input type="checkbox" id="VA" name="VA">
+								<label for="VA" >Vietnam Airlines</label>
+							</div>
+							<div class="py-2">
+								<input type="checkbox" id="BA" name="BA">
+								<label for="BA" >Bammboo Airways</label>
+							</div>	
+						</div>
+					</div>
+					<div class=" w-1/2 md:w-full">
+						<hr>
+						<div class="py-2">ĐIỂM DỪNG </div>
+						<div>
+							<div class="py-2">
+								<input type="radio" id="all" name="stop_point" checked>
+								<label for="all"   >Tất cả</label>
+							</div>
+							<div class="py-2">
+								<input type="radio" id="nopoint" name="stop_point">
+								<label for="nopoint" >Bay thẳng </label>
+							</div>	
+							<div class="py-2">
+								<input type="radio" id="1point" name="stop_point">
+								<label for="1point" >1 Điểm dừng</label>
+							</div>	
+							<div class="py-2">
+								<input type="radio" id="2point" name="stop_point">
+								<label for="2point" >2 Điểm dừng </label>
+							</div>	
+						</div>
+					</div>
+					<div class=" w-1/2 md:w-full">
+						<hr>
+						<div class="py-2">THỜI GIAN</div>
+						
+						<div slider id="slider-distance">
+						  <div>
+						    <div inverse-left style="width:70%;"></div>
+						    <div inverse-right style="width:70%;"></div>
+						    <div range style="left:0%;right:0%;"></div>
+						    <span thumb style="left:0%;"></span>
+						    <span thumb style="left:100%;"></span>
+						    <div sign style="left:0%;">
+						      <span id="value">0:00</span>
+						    </div>
+						    <div sign style="left:100%;">
+						      <span id="value">24:00</span>
+						    </div>
+						  </div>
+						  <input type="range" tabindex="0" value="0" max="24" min="0" step="1" oninput="
+						  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+						  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+						  var children = this.parentNode.childNodes[1].childNodes;
+						  children[1].style.width=value+'%';
+						  children[5].style.left=value+'%';
+						  children[7].style.left=value+'%';children[11].style.left=value+'%';
+						  children[11].childNodes[1].innerHTML=this.value+':00';" />
+						  <input type="range" tabindex="0" value="24" max="24" min="0" step="1" oninput="
+						  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+						  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+						  var children = this.parentNode.childNodes[1].childNodes;
+						  children[3].style.width=(100-value)+'%';
+						  children[5].style.right=(100-value)+'%';
+						  children[9].style.left=value+'%';children[13].style.left=value+'%';
+						  children[13].childNodes[1].innerHTML=this.value+':00';" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+	</div>
+</body>
+<script>
+		
+	    function showif(num) {
+	    	if(document.getElementById("if"+num).style.display=='block') 
+	    		document.getElementById("if"+num).style.display='none';
+	    	else{
+	    		document.getElementById("if"+num).style.display='block';
+	    	}
+	    }
+
+	    function ifm(num1,num){
+	    	document.getElementById("ifm"+num1+"1").style.display='none';
+	    	document.getElementById("ifm"+num1+"2").style.display='none';
+	    	document.getElementById("ifm"+num1+"3").style.display='none';
+	    	document.getElementById("ifm"+num1+num).style.display='block';
+	    	document.getElementById("title_ifm"+num1+"1").classList.remove('border-b-2');
+	    	document.getElementById("title_ifm"+num1+"2").classList.remove('border-b-2');
+	    	document.getElementById("title_ifm"+num1+"3").classList.remove('border-b-2');
+	    	document.getElementById("title_ifm"+num1+num).classList.add('border-b-2');
+	    }
+
+	    
+</script>
+</html>
