@@ -17,14 +17,17 @@
 
 	<div class="form2" >
 		<div class=" flex flex-wrap">
-			<div class="w-full py-2">
+			<div class="w-full lg:w-1/2 px-2 py-2">
 				<input type="checkbox" name="khu_hoi" id="kh" onclick="change_kh()">
 				<label for="kh" class="px-2">Khứ hồi </label>
 			</div>
-			
+			<div class="w-full lg:w-1/2 px-2 py-2">
+				<input type="checkbox" name="month" id="month">
+				<label for="month" class="px-2">Tìm theo tháng</label>
+			</div>
 		</div>
 		<div class="flex flex-wrap">
-				<div class="inputwithicon w-full ">
+				<div class="inputwithicon w-full lg:w-1/2">
 					<!-- <input class="box_form2 font-mono" type="text" name="" > -->
 					<input list="pos_start" class="box_form2 " type="text">
 
@@ -36,7 +39,7 @@
 					</datalist>
 					<i class="fas fa-plane-departure" ></i>
 				</div>
-				<div class="inputwithicon w-full ">
+				<div class="inputwithicon w-full lg:w-1/2 ">
 					<!-- <input class="box_form2 font-mono" type="text" name="" > -->
 					<input list="pos_start" class="box_form2 " type="text">
 
@@ -48,14 +51,14 @@
 					</datalist>
 					<i class="fas fa-plane-arrival" ></i>
 				</div>
-				<div class="inputwithicon w-full ">
+				<div class="inputwithicon sm:w-full lg:w-1/2">
 					<!-- <input class="box_form2 font-mono" type="text" name="" > -->
 					<input class="box_form2  " id="date_go" type="text" name="daterangego" style="display: none;" >
 					<input class="box_form2  " id="date_back" type="text" name="daterangeback" >
 
 					<i class="far fa-calendar"></i>
 				</div>
-				<div class="dropdown w-full" >
+				<div class="dropdown sm:w-full lg:w-1/2" >
 
 			        <button class="box_form focus:outline-none" id="btn-select-num-people" onclick="showOption()" >
 			        	<table width="100%">
@@ -64,12 +67,12 @@
 			        				<i class="far fa-user i" ></i>
 			        			</td>
 			        			<td>
-			        				 <b class="num-people-total" style="display: none;">
-						                <b class="total-people">1</b>
-						                <b class="">khách</b>
-						            </b>
+			        				 <div class="num-people-total" >
+						                <div class="total-people">1</div>
+						                <div class="px-2">khách</div>
+						            </div>
 						            <div class="row">
-						                <i class="num-people-regis text-gray-900" >1 NL,0 TE,0 EB</i>
+						                <i class="num-people-regis text-gray-900" style="display: none;">1 NL,0 TE,0 EB</i>
 						            </div>
 			        			</td>
 			        		</tr>
@@ -90,10 +93,10 @@
 				                        <i class="text-detail-people">(Từ 12 tuổi)</i>
 				                    </td>
 				                    <td width="10%" colspan="4">
-				                        <button class="button" onclick="decreaseCount('num-aldult')">-</button>
+				                        <button class="button rounded-full focus:outline-none" onclick="decreaseCount('num-aldult')">-</button>
 				                    </td>
 				                    <td width="10%">
-				                        <button class="button" onclick="increaseCount('num-aldult')">+</button>
+				                        <button class="button rounded-full focus:outline-none" onclick="increaseCount('num-aldult')">+</button>
 				                    </td>
 				                </tr>
 				        </table>
@@ -108,10 +111,10 @@
 				                        <i class="text-detail-people">(Từ 2-12 tuổi)</i>
 				                    </td>
 				                    <td width="10%" colspan="4">
-				                        <button class="button" onclick="decreaseCount('num-kids')">-</button>
+				                        <button class="button rounded-full focus:outline-none" onclick="decreaseCount('num-kids')">-</button>
 				                    </td>
 				                    <td width="10%">
-				                        <button class="button" onclick="increaseCount('num-kids')">+</button>
+				                        <button class="button rounded-full focus:outline-none" onclick="increaseCount('num-kids')">+</button>
 				                    </td>
 				                </tr>
 				        </table>
@@ -126,10 +129,10 @@
 				                        <i class="text-detail-people ">(<2 tuổi)</i>
 				                    </td>
 				                    <td width="10%" colspan="4">
-				                        <button class="button" onclick="decreaseCount('num-baby')">-</button>
+				                        <button class="button rounded-full focus:outline-none" onclick="decreaseCount('num-baby')">-</button>
 				                    </td>
 				                    <td width="10%">
-				                        <button class="button" onclick="increaseCount('num-baby')">+</button>
+				                        <button class="button rounded-full focus:outline-none" onclick="increaseCount('num-baby')">+</button>
 				                    </td>
 				                </tr>
 			            	
@@ -137,7 +140,7 @@
 			            </table>
 	    			</div>
 	    		</div>
-	    		<button type="submit" class="pd w-full font-semibold focus:outline-none"><i class="fas fa-search px-2"></i>TÌM KIẾM  </button>
+	    		<button type="submit" class="pd w-full font-semibold focus:outline-none mini "><i class="fas fa-search px-2"></i>TÌM KIẾM  </button>
 		</div>
 	</div>
 	

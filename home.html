@@ -17,11 +17,14 @@
 
 	<div class="form1" >
 		<div class=" flex flex-wrap">
-			<div class="w-full md:w-1/2 lg:w-1/4 px-2 py-2">
+			<div class="w-full md:w-1/2 lg:w-4/5 px-2 py-2">
 				<input type="checkbox" name="khu_hoi" id="kh" onclick="change_kh()">
 				<label for="kh" class="px-2">Khứ hồi </label>
 			</div>
-			
+			<div class="w-full md:w-1/2 lg:w-1/5 px-2 py-2">
+				<input type="checkbox" name="month" id="month">
+				<label for="month" class="px-2">Tìm theo tháng</label>
+			</div>
 		</div>
 		<div class="flex flex-wrap">
 				<div class="inputwithicon w-full md:w-1/2 lg:w-1/5">
@@ -29,11 +32,30 @@
 					<input list="pos_start" class="box_form2 " type="text">
 
 					<datalist id="pos_start" >
-					  <option value="hcm">Ho Chi Minh</option>
-					  <option value="hcm">Ho Chi Minh</option>
-					  <option value="hcm">Ho Chi Minh</option>
-					  <option value="hcm">Ho Chi Minh</option>
+					  <option >Điện Biên Phủ - Điện Biên Phủ (DIN) - Việt Nam</option>
+					  <option value="Hà Nội - Nội Bài (HAN) - Việt Nam" ></option>
+					  <option value="Pleiku - Pleiku (PXU) - Việt Nam"></option>
+					  <option value="Hải phòng - Cát Bi (HPH) - Việt Nam"></option>
+					  <option value="Phú Quốc - Phú Quốc (PQC) - Việt Nam"></option>
+					  <option value="Tam Kỳ - Chu Lai (VCL) - Việt Nam"></option>
+					  <option value="Tuy Hòa - Tuy Hòa (TBB) - Việt Nam"></option>
+					  <option value="Thành phố Hồ Chí Minh - Tân Sơn Nhất (SGN) - Việt Nam"></option>
+					  <option value="Đà Nẵng - Đà Nẵng (DAD) - Việt Nam"></option>
+					  <option value="Thanh Hóa - Thọ Xuân (THD)-Việt Nam"></option>
+					  <option value="Cà Mau - Cà Mau(CAH)-Việt nam"></option>
+					  <option value="Buôn Ma Thuột - Buôn Ma Thuột (BMV) - Việt Nam"></option>
+					  <option value="Rạch Giá - Rạch Giá (VKG) - Việt Nam"></option>
+					  <option value="Cần Thơ - Cần Thơ (VCA) - Việt Nam"></option>
+					  <option value="Côn Đảo - Côn Đảo(VCS) - Việt Nam"></option>
+					  <option value="Đà Lạt - Liên Khương (DLI) - Việt Nam"></option>
+					  <option value="Qui Nhơn - Phù Cát (UIH) - Việt Nam"></option>
+					  <option value="Đồng Hới - Đồng Hới(VDH) - Việt Nam"></option>
+					  <option value="Huế - Phú Bài (HUI) - Việt Nam"></option>
+					  <option value="Nha Trang - Cam Ranh (CXR) - Việt Nam"></option>
+					  <option value="Vinh - Vinh (VII) - Việt Nam"></option>
+					  <option value="Quảng Ninh - Vân Đồn(VDO)-Việt Nam"></option>
 					</datalist>
+					
 					<i class="fas fa-plane-departure" ></i>
 				</div>
 				<div class="inputwithicon w-full md:w-1/2 lg:w-1/5">
@@ -41,10 +63,28 @@
 					<input list="pos_start" class="box_form2 " type="text">
 
 					<datalist id="pos_start">
-					  <option value="hcm">Ho Chi Minh</option>
-					  <option value="hcm">Ho Chi Minh</option>
-					  <option value="hcm">Ho Chi Minh</option>
-					  <option value="hcm">Ho Chi Minh</option>
+					  <option value="Điện Biên Phủ - Điện Biên Phủ (DIN) - Việt Nam"></option>
+					  <option value="Hà Nội - Nội Bài (HAN) - Việt Nam" ></option>
+					  <option value="Pleiku - Pleiku (PXU) - Việt Nam"></option>
+					  <option value="Hải phòng - Cát Bi (HPH) - Việt Nam"></option>
+					  <option value="Phú Quốc - Phú Quốc (PQC) - Việt Nam"></option>
+					  <option value="Tam Kỳ - Chu Lai (VCL) - Việt Nam"></option>
+					  <option value="Tuy Hòa - Tuy Hòa (TBB) - Việt Nam"></option>
+					  <option value="Thành phố Hồ Chí Minh - Tân Sơn Nhất (SGN) - Việt Nam" ></option>
+					  <option value="Đà Nẵng - Đà Nẵng (DAD) - Việt Nam"></option>
+					  <option value="Thanh Hóa - Thọ Xuân (THD)-Việt Nam"></option>
+					  <option value="Cà Mau - Cà Mau(CAH)-Việt nam"></option>
+					  <option value="Buôn Ma Thuột - Buôn Ma Thuột (BMV) - Việt Nam"></option>
+					  <option value="Rạch Giá - Rạch Giá (VKG) - Việt Nam"></option>
+					  <option value="Cần Thơ - Cần Thơ (VCA) - Việt Nam"></option>
+					  <option value="Côn Đảo - Côn Đảo(VCS) - Việt Nam"></option>
+					  <option value="Đà Lạt - Liên Khương (DLI) - Việt Nam"></option>
+					  <option value="Qui Nhơn - Phù Cát (UIH) - Việt Nam"></option>
+					  <option value="Đồng Hới - Đồng Hới(VDH) - Việt Nam"></option>
+					  <option value="Huế - Phú Bài (HUI) - Việt Nam"></option>
+					  <option value="Nha Trang - Cam Ranh (CXR) - Việt Nam"></option>
+					  <option value="Vinh - Vinh (VII) - Việt Nam"></option>
+					  <option value="Quảng Ninh - Vân Đồn(VDO)-Việt Nam"></option>
 					</datalist>
 					<i class="fas fa-plane-arrival" ></i>
 				</div>
@@ -64,12 +104,12 @@
 			        				<i class="far fa-user i" ></i>
 			        			</td>
 			        			<td>
-			        				 <b class="num-people-total" style="display: none;">
-						                <b class="total-people">1</b>
-						                <b class="">khách</b>
-						            </b>
+			        				 <div class="num-people-total" >
+						                <div class="total-people">1</div>
+						                <div class="px-2">khách</div>
+						            </div>
 						            <div class="row">
-						                <i class="num-people-regis text-gray-900" >1 NL,0 TE,0 EB</i>
+						                <i class="num-people-regis text-gray-900" style="display: none;">1 NL,0 TE,0 EB</i>
 						            </div>
 			        			</td>
 			        		</tr>

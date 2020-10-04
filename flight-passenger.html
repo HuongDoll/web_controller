@@ -172,13 +172,26 @@
 						<input type="checkbox" id="note" onclick="add_note()">
 						<label class="px-2" for="note">Ghi chú </label>
 					</div>
-					<textarea class="w-full shadow appearance-none border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mx-3" style="display: none;" id="text_note"></textarea>
+					<textarea class="w-full shadow appearance-none border rounded w-full px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mx-3" style="display: none;" id="text_note"></textarea>
 					
-					<div class="w-full px-3">
-						<input type="checkbox" id="bill">
+					<div class="w-full px-3 my-2">
+						<input type="checkbox" id="bill" onclick="add_bill()">
 						<label class="px-2" for="bill">Xuất hóa đơn</label>
 					</div>
-						
+					<div class="flex flex-wrap w-full my-2" style="display: none" id="textbill">
+						<div class="flex flex-wrap w-full md:w-1/2 px-3 py-2">
+							<label class="py-1" for="so-thue">Mã số thuế</label>
+							<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="so-thue" id="so-thue">
+						</div>
+						<div class="flex flex-wrap w-full md:w-1/2 px-3 py-2">
+							<label class="py-1" for="name_city">Tên Công ty</label>
+							<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name_city" id="name_city">
+						</div>
+						<div class="flex flex-wrap w-full px-3 py-2">
+							<label class="py-1" for="adress">Địa chỉ</label>
+							<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="adress" id="adress">
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="w-full md:w-1/3 flex flex-wrap bg-gray-100 rounded px-6 py-3">
@@ -293,6 +306,11 @@
 			if(document.getElementById("text_note").style.display=="none")
 				document.getElementById("text_note").style.display="block";
 			else document.getElementById("text_note").style.display="none";
+		}
+		function add_bill(){
+			if(document.getElementById("textbill").style.display=="none")
+				document.getElementById("textbill").style.display="block";
+			else document.getElementById("textbill").style.display="none";
 		}
 </script>
 </html>
